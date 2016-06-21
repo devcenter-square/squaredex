@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '4.2.4'
 gem 'rails-api'
+gem 'responders'
 gem 'devise_token_auth'
 gem 'omniauth-slack'
 gem 'active_model_serializers'

@@ -159,10 +159,10 @@ DEPENDENCIES
   kaminari
   omniauth-slack
   pg
-  rails (= 4.2.4)
   rails-api
   rails_12factor
   rails_param
+  responders
   spring
   sqlite3
 

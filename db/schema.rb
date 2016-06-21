@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160620105343) do
+ActiveRecord::Schema.define(version: 20160620134731) do
+
+  create_table "karma_requests", force: :cascade do |t|
+    t.string   "reason",                     null: false
+    t.string   "from",                       null: false
+    t.string   "to",                         null: false
+    t.integer  "project_id",                 null: false
+    t.boolean  "approved",   default: false
+    t.integer  "karma"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false

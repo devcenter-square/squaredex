@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     scope module: :v1 do
       resources :users, only: [:show]
       get '/leaderboard', to: 'users#leaderboard'
+      resources :karma_requests, only: [:create, :update]
     end
   end
 end
