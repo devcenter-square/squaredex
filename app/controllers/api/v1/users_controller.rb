@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+
+  end
+
 
   def show
-    paginate json: current_user, status: 200
+    render json: current_user, status: 200
   end
 
   def leaderboard

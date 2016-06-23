@@ -1,3 +1,3 @@
 class KarmaRequestsSerializer < ActiveModel::Serializer
-  attributes :reason, :project_id, :from, :to, :approved
+  attributes :id, :reason, :project_id, :from, :to, :approved
 end
