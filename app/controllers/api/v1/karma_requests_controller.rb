@@ -4,18 +4,24 @@ class KarmaRequestsController < ApplicationController
 
 
   def create
-    validate_create_params
-    @karma_request = KarmaRequest.create(params)
-    render @karma_request, status: 201
+    ActiveRecord::Base.transaction do
+      validate_create_params
+      @karma_request = KarmaRequest.new(params)
+      @karma_request.from = current_user.uid
+      @karma_request.save
+      render @karma_request, status: 201
+    end
   end
 
   def update
-    validate_update_params
-    if @karma_request.approved
-      head 403
-    else
-      @karma_request.update(params)
-      render @karma_request, status: 200
+    ActiveRecord::Base.transaction do
+      validate_update_params
+      if @karma_request.approved
+        head 403
+      else
+        @karma_request.update(params)
+        render @karma_request, status: 200
+      end
     end
   end
 
@@ -28,7 +34,6 @@ class KarmaRequestsController < ApplicationController
 
   def validate_create_params
     param! :reason, String, required: true
-    param! :from, String, required: true
     param! :to, String, required: true
     param! :project_id, Integer, required: true
     param! :karma, Integer
