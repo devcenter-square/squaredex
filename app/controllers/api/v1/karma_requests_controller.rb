@@ -1,4 +1,4 @@
-class KarmaRequestsController < ApplicationController
+class Api::V1::KarmaRequestsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_karma_request, only: :update
 
