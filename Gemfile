@@ -9,6 +9,8 @@ gem 'active_model_serializers'
 gem 'rails_param'
 gem 'kaminari'
 gem 'api-pagination'
+gem 'rack-cors', :require => 'rack/cors'
+
 
 
 group :development, :test do
