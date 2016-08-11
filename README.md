@@ -6,7 +6,9 @@ This is going to be a quick and dirty outline of the endpoints that have been cr
 
 To initiate Authentication via slack, create a link/button that opens https://squaredex-api.herokuapp.com/api/auth/slack
 
-Once the user is done giving permission, it would redirect to https://squaredex.herokuapp.com/auth-return with the user's token/credentials. Angular can take it from there. You'll need the token to authenticate subseqent requests.
+Once the user is done giving permission, it would redirect to https://squaredex.herokuapp.com/auth-return with the user's token/credentials.
+
+To authenticate a request, the following headers need to be added to the request: `access-token`, `client` and `uid`. These are to be obtained from the path parameters in the redirect url.
 
 You can call `GET https://squaredex-api.herokuapp.com/api/auth/validate_token` to validate token
 You can call `PATCH https://squaredex-api.herokuapp.com/auth` to edit the sign in users' details. Params are: `name`, `nickname`, `github_username`. I think, for now, users should only be able to change `github_username`.
