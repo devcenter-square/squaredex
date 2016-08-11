@@ -12,4 +12,8 @@ class ApplicationController < ActionController::API
     {root: false}
   end
 
+  def after_sign_in_path_for(resource_or_scope)
+    'https://squaredex.herokuapp.com/#/auth-return'
+  end
+
 end
