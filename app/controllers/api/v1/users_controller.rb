@@ -2,7 +2,8 @@ class Api::V1::UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-
+    @users = User.all
+    render json: @users, status: 200
   end
 
 
@@ -11,7 +12,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def leaderboard
-    @users = User.order_by("karma DESC").limit(20)
+    @users = User.order("karma DESC").limit(20)
     render json: @users, status: 200
   end
 
