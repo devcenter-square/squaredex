@@ -5,10 +5,7 @@ describe Api::V1::KarmaManagementController, type: :controller do
   let(:user){ create(:user) }
   let(:admin){ create(:user, :admin) }
 
-  describe 'unauthorized' do
-    before do
-      sign_in user
-    end
+  describe 'unauthenticated' do
 
     describe 'GET#index' do
       it 'does not permit access' do
