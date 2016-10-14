@@ -18,7 +18,7 @@ describe Api::V1::KarmaManagementController, type: :controller do
 
   describe 'unauthorized' do
     before do
-      sign_in user
+      authenticate_request user
     end
 
     describe 'GET#index' do
@@ -31,7 +31,7 @@ describe Api::V1::KarmaManagementController, type: :controller do
 
   describe 'authorized' do
     before do
-      sign_in admin
+      authenticate_request admin
     end
 
     describe 'GET#index' do
