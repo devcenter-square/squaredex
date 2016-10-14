@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
 
   validates :role, inclusion: ROLES
 
+  def admin?
+    role == 'admin'
+  end
+
 end
