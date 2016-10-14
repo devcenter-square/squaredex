@@ -18,6 +18,12 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
+
 
 group :production do
   gem 'rails_12factor'
