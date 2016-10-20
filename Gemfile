@@ -24,6 +24,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
+  gem 'simplecov', require: false
 end
 
 
