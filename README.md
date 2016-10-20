@@ -1,4 +1,4 @@
-# squaredex
+# squaredex [![Build Status](https://travis-ci.org/devcenter-square/squaredex.svg?branch=master)](https://travis-ci.org/devcenter-square/squaredex)
 
 This is going to be a quick and dirty outline of the endpoints that have been created for consumption by the front-end. Emphasis on quick and dirty, at least for now.
 
