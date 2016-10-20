@@ -18,6 +18,15 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'faker'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'simplecov', require: false
+end
+
 
 group :production do
   gem 'rails_12factor'

@@ -43,6 +43,7 @@ GEM
     bcrypt (3.1.11)
     builder (3.2.2)
     concurrent-ruby (1.0.2)
+    database_cleaner (1.5.3)
     devise (4.0.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -52,7 +53,16 @@ GEM
     devise_token_auth (0.1.37)
       devise (> 3.5.2, < 4.1)
       rails (< 6)
+    diff-lcs (1.2.5)
+    docile (1.1.5)
     erubis (2.7.0)
+    factory_girl (4.7.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.7.0)
+      factory_girl (~> 4.7.0)
+      railties (>= 3.0.0)
+    faker (1.6.3)
+      i18n (~> 0.5)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     globalid (0.3.6)
@@ -134,6 +144,30 @@ GEM
     rake (11.2.2)
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-rails (3.5.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
+    simplecov (0.12.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
     spring (1.7.1)
     sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
@@ -156,7 +190,10 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.8.0)
   api-pagination
+  database_cleaner
   devise_token_auth
+  factory_girl_rails
+  faker
   kaminari
   omniauth-slack
   pg
@@ -165,8 +202,11 @@ DEPENDENCIES
   rails_12factor
   rails_param
   responders
+  rspec-rails
+  shoulda-matchers
+  simplecov
   spring
   sqlite3
 
 BUNDLED WITH
-   1.12.5
+   1.13.1

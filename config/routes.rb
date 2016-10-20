@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get '/user',  to: 'users#show'
       get '/leaderboard', to: 'users#leaderboard'
       resources :karma_requests, only: [:create, :update]
+      resources :karma_management, only: [:index, :update]
     end
   end
 end

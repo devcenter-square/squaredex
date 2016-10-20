@@ -16,4 +16,9 @@ class ApplicationController < ActionController::API
     'https://squaredex.herokuapp.com/auth-return'
   end
 
+  private
+  def authenticate_admin!
+    render json: 'Unauthorized', status: :unauthorized unless current_user.admin?
+  end
+
 end

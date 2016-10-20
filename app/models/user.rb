@@ -3,5 +3,12 @@ class User < ActiveRecord::Base
           :recoverable, :rememberable, :trackable, :validatable,
           :confirmable, :omniauthable
   include DeviseTokenAuth::Concerns::User
+  ROLES = %w(user admin)
+
+  validates :role, inclusion: ROLES
+
+  def admin?
+    role == 'admin'
+  end
 
 end

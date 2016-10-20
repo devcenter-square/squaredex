@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160620134731) do
+ActiveRecord::Schema.define(version: 20161014215212) do
 
   create_table "karma_requests", force: :cascade do |t|
     t.string   "reason",                     null: false
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160620134731) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "karma",                  default: 0
+    t.string   "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email"
