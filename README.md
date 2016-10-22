@@ -4,6 +4,13 @@
 
 This is going to be a quick and dirty outline of the endpoints that have been created for consumption by the front-end. Emphasis on quick and dirty, at least for now.
 
+### Requirements
+The requirements for this project's MVP is as highlighted in this [google document here](https://docs.google.com/document/d/10CCzJHSeR7NNtPkyBdDzGWmj7DqmtHb2JKjqZuk56tk/edit). 
+
+ - Parts painted green are already implemented
+ - Parts painted yellow are under development
+ - Parts un-painted(painted default :stuck_out_tongue_closed_eyes: ) are up for grabs
+
 ### Auth
 
 To initiate Authentication via slack, create a link/button that opens https://squaredex-api.herokuapp.com/api/auth/slack
